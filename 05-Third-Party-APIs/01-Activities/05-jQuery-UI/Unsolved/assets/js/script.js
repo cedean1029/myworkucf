@@ -29,7 +29,7 @@ var handleFormSubmit = function(event) {
 
 formEl.on('submit', handleFormSubmit);
 
-// TODO: Add comments to describe the functionality of this jQuery UI interaction
+// this gives a list of skills the user has to choose from via a text box and it begins to predict the text when the user starts typing
 $(function() {
   var skillNames = [
     'Bootstrap',
@@ -56,7 +56,7 @@ $(function() {
   });
 });
 
-// TODO: Add comments to describe the functionality of this jQuery UI interaction
+// Gives the user a date picker option when the box is selected
 $(function() {
   $('#datepicker').datepicker({
     changeMonth: true,
@@ -64,7 +64,7 @@ $(function() {
   });
 });
 
-// TODO: Add comments to describe the functionality of this jQuery UI interaction
+// gives the user the option to manually sort the skills they had submitted
 $(function() {
   $('#skills-list').sortable({
     placeholder: 'ui-state-highlight'
