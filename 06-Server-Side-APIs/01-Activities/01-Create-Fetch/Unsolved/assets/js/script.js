@@ -17,19 +17,25 @@ function getApi() {
       for (var i = 0; i < data.length; i++) {
         // Create a list element
         var listItem = document.createElement('li');
-        var repoLink = document.querySelector('a href');
+        var repoLink = document.createElement('a');
+        repoLink.textContent = data[i].name;
+        repoLink.setAttribute("href", data[i].html_url);
+        repoLink.setAttribute("target", "_blank");
 
-        listItem.textContent = data[i].name;
-        repoLink = data[i].html_url;
-        console.log(repoLink);
-
-        // Set the text of the list element to the JSON response's .html_url property
-        //listItem.textContent = data[i].html_url;
-
-        // Append the li element to the id associated with the ul element.
-        
-        repoLink.appendChild(repoNames);
+        listItem.appendChild(repoLink);
         repoNames.appendChild(listItem);
+
+        // listItem.textContent = data[i].name;
+        // repoLink = data[i].html_url;
+        // console.log(repoLink);
+
+        // // Set the text of the list element to the JSON response's .html_url property
+        // //listItem.textContent = data[i].html_url;
+
+        // // Append the li element to the id associated with the ul element.
+        
+        // repoLink.appendChild(listItem);
+        // repoNames.appendChild(listItem);
         
       }
     });
